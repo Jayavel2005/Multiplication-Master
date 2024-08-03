@@ -24,30 +24,42 @@
     <div class="container-fluid main-container ">
       <div class="row px-2">
 
-        <div class="col game-screen p-5 border">
-          <h1 class="text-center title">Multiplication <span class="text-white">Master</span></h1>
-          <div class="mb-2 border">
+        <div class="col game-screen p-5 ">
+          <h1 class="text-center title">Multiplication <span class="text-white">Master <i class="fa-solid fa-cubes-stacked" style="color: #9900ff;"></i></span></h1>
+          <div class="mb-2 ">
             <p class="text-center mb-2 question-tag text-white">Question</p>
-            <p class="text-center m-0 question">What is 4 x 5 ?</p>
+            <p class="text-center m-0 question js-question">What is 4 x 5 ?</p>
           </div>
 
-          <div class="row border py-3">
-            <div class="col-md-8 my-1 ">
-              <input type="number" class="w-100 p-2 rounded input-box" placeholder="Enter your answer">
+          <div class="row  py-3">
+            <div class="col-sm-12 my-1 ">
+              <input type="number" class="w-100 p-2 rounded input-box js-input-box" placeholder="Enter your answer">
+              <small class="error js-error">Enter your answer</small>
             </div>
-            <div class="col-md-4 my-1">
-              <button class="btn btn-primary w-100">Submit</button>
+            <div class="col-sm-6 my-1">
+              <button class="btn btn-primary w-100 js-submit-answer" onclick="submitAnswer()">Submit</button>
+            </div>
+            <div class="col-sm-6 my-1">
+              <button class="btn btn-primary w-100 js-reset-score" onclick="resetScore()">Reset</button>
             </div>
             
           </div>
-          <div class="border col-sm-12 my-2 py-2">
+          <!-- <div class=" col-sm-12">
             <p class="text-center result m-0 ">Result:</p>
-            <p class="text-center m-0 correct-result">Your answer is right</p>
-            <p class="text-center m-0 wrong-result">Your answer is wrong.The correct answer is 20.</p>
-          </div>
+            <p class="text-center m-0 correct-result js-correct-result">Your answer is right</p>
+            <p class="text-center m-0 wrong-result js-wrong-result">Your answer is wrong. The correct answer is 30</p>
+          </div> -->
 
-          <div class="col-sm-12 score-board mt-2 p-2">
-            <p class="text-center score m-0">Score: <span class="text-white">0</span></p>
+          <div class="col-sm-12 score-board ">
+            <p class="text-center score m-0">Score</p>
+            <div class="row">
+              <div class="col-sm-6">
+                <p class="text-center text-white js-correct-score">Correct: 0</p>
+              </div>
+              <div class="col-sm-6">
+                <p class="text-center text-white js-incorrect-score">Incorrect: 0</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
