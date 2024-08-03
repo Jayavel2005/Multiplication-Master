@@ -29,9 +29,11 @@ body{
 .input-box:focus{
     outline: none;
 } 
-::placeholder{
+::placeholder,
+.error{
     color : #fbc2eb;
     font-family : arial;
+    display : none;
 }
 
 .question-tag{
@@ -46,12 +48,15 @@ body{
 
 .correct-result{
     color: green;
-    /* display : none; */
+    display : none;
 }
-.wrong-result{
+.wrong-result,
+.error{
     color: red;
-    /* display : none; */
+    display : none;
+    
 }
+
 
 .score{
     font-size: 20px;
